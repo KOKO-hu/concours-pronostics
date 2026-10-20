@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: concours-postgres
+    environment:
+      POSTGRES_USER: concours
+      POSTGRES_PASSWORD: concours
+      POSTGRES_DB: concours
+    ports:
+      - "5432:5432"
+    volumes:
+      - concours-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U concours -d concours"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  concours-postgres:

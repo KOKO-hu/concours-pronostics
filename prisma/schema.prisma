@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String      @id @default(cuid())
+  email        String      @unique
+  passwordHash String      @map("password_hash")
+  createdAt    DateTime    @default(now()) @map("created_at")
+  pronostics   Pronostic[]
+
+  @@map("users")
+}
+
+model Pronostic {
+  id            String   @id @default(cuid())
+  userId        String   @map("user_id")
+  matchId       Int      @map("match_id")
+  butsDomicile  Int      @map("buts_domicile")
+  butsExterieur Int      @map("buts_exterieur")
+  points        Int?
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, matchId])
+  @@index([matchId])
+  @@map("pronostics")
+}
+
+/// Première annonce du score. Tant que cette ligne existe, les points ne bougent plus.
+model Resultat {
+  id            String   @id @default(cuid())
+  matchId       Int      @unique @map("match_id")
+  butsDomicile  Int      @map("buts_domicile")
+  butsExterieur Int      @map("buts_exterieur")
+  annonceLe     DateTime @default(now()) @map("annonce_le")
+
+  @@map("resultats")
+}

@@ -1,0 +1,80 @@
+{
+  "matchs": [
+    {
+      "id": 1,
+      "ligue": "Ligue 1",
+      "coup_envoi": "2026-10-24T19:00:00Z",
+      "domicile": "PSG",
+      "exterieur": "Lens",
+      "statut": "a_venir"
+    },
+    {
+      "id": 2,
+      "ligue": "Ligue 1",
+      "coup_envoi": "2026-10-24T15:00:00Z",
+      "domicile": "Marseille",
+      "exterieur": "Lyon",
+      "statut": "a_venir"
+    },
+    {
+      "id": 3,
+      "ligue": "Premier League",
+      "coup_envoi": "2026-10-24T14:00:00Z",
+      "domicile": "Arsenal",
+      "exterieur": "Chelsea",
+      "statut": "a_venir"
+    },
+    {
+      "id": 4,
+      "ligue": "Premier League",
+      "coup_envoi": "2026-10-24T16:30:00Z",
+      "domicile": "Liverpool",
+      "exterieur": "Everton",
+      "statut": "a_venir"
+    },
+    {
+      "id": 5,
+      "ligue": "CAF Champions League",
+      "coup_envoi": "2026-10-24T17:00:00Z",
+      "domicile": "Al Ahly",
+      "exterieur": "Esperance Tunis",
+      "statut": "a_venir"
+    },
+    {
+      "id": 6,
+      "ligue": "La Liga",
+      "coup_envoi": "2026-10-25T20:00:00Z",
+      "domicile": "Real Madrid",
+      "exterieur": "Barcelone",
+      "statut": "a_venir"
+    },
+    {
+      "id": 7,
+      "ligue": "Ligue 1",
+      "coup_envoi": "2026-10-10T19:00:00Z",
+      "domicile": "Nice",
+      "exterieur": "Rennes",
+      "statut": "termine",
+      "buts_domicile": 1,
+      "buts_exterieur": 2
+    },
+    {
+      "id": 8,
+      "ligue": "CAF Champions League",
+      "coup_envoi": "2026-10-11T16:00:00Z",
+      "domicile": "Wydad",
+      "exterieur": "Mamelodi Sundowns",
+      "statut": "termine",
+      "buts_domicile": 0,
+      "buts_exterieur": 0
+    }
+  ],
+  "predictions_ia": [
+    { "match_id": 1, "score_predit": "2-0", "confiance": 0.74 },
+    { "match_id": 2, "score_predit": "1-1", "confiance": 0.52 },
+    { "match_id": 3, "score_predit": "2-1", "confiance": 0.58 },
+    { "match_id": 4, "score_predit": "3-0", "confiance": 0.7 },
+    { "match_id": 5, "score_predit": "1-0", "confiance": 0.61 },
+    { "match_id": 6, "score_predit": "2-2", "confiance": 0.49 }
+  ]
+}
